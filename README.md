@@ -4,19 +4,19 @@
 
 The Traveling Salesman Problem is a classic optimization problem in computer science. The problem is defined as follows: given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the starting city?
 
-Virtual threads are a new feature in JDK 19+ that allow for lightweight concurrency without the overhead of context switching, making them ideal for tasks that require a large number of threads. This implementation uses the brute-force algorithm to calculate the shortest route for each starting city and prints the total distance to the console.
+Virtual threads are a new feature that allow for lightweight concurrency without the overhead of context switching, making them ideal for tasks that require a large number of threads. This implementation uses the brute-force algorithm to calculate the shortest route for each starting city and prints the total distance to the console.
 
-## Running the Example with the JDK 19+
+## Running the Example with the JDK 20
 
-1. Install JDK 19+
+1. Install JDK 20
 2. Open a terminal or command prompt and navigate to the directory containing the `TravelingSalesman.java` file.
 3. Compile the source code by running the following command:
 
    ```java
-   javac --enable-preview TravelingSalesman.java
+   javac --enable-preview -source 20 TravelingSalesman.java
    ```
 
-   Note: The `--enable-preview` flag is only needed for Virtual Threads in JDK 19 or 20.
+   Note: The `--enable-preview` flag is only needed for Virtual Threads in JDK 20.
    
 4. Run the program by running the following command:
 
@@ -27,10 +27,9 @@ Virtual threads are a new feature in JDK 19+ that allow for lightweight concurre
 The program will calculate the shortest route for each starting city and print the total distance to the console.
 
 ## Running the Example in Visual Studio Code
-
 To run the `TravelingSalesman` class in Visual Studio Code, follow these steps:
 
-1. Install JDK 19+
+1. Install JDK 20
 2. Install the Java Extension Pack for Visual Studio Code.
 3. Open the `TravelingSalesman.java` file in Visual Studio Code.
 4. Press `F5` to open the Run panel.
@@ -38,14 +37,6 @@ To run the `TravelingSalesman` class in Visual Studio Code, follow these steps:
 6. Press `Enter` to run the configuration.
 
    This will run the `TravelingSalesman` class and output the total distance for each starting city in the Debug Console.
-
-Note: If you are using virtual threads in JDK 19 or 20, Make sure to enable virtual threads by adding the `--enable-preview` flag to the `java.compilerArgs` setting in the `.vscode/settings.json` file:
-
-```json
-{
-    "java.compilerArgs": ["--enable-preview"]
-}
-```
 
 Note: Make sure to restart Visual Studio Code after making this change for it to take effect.
 
