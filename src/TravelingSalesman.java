@@ -31,7 +31,7 @@ public class TravelingSalesman {
         }
 
         executor.shutdown();
-        executor.awaitTermination(3, TimeUnit.SECONDS);
+        executor.awaitTermination(1, TimeUnit.HOURS);
 
         // Print all routes
         for (String city : allCities) {
