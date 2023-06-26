@@ -1,9 +1,9 @@
 # Virtual threads and the Traveling Salesman problem
 
 The TravelingSalesman class uses virtual threads to calculate the shortest route for each starting city in parallel. The for loop on line 14 iterates over each starting city and creates a virtual thread to calculate the shortest route.
-The `startVirtualThread()` method creates a virtual thread that is scheduled by the virtual machine instead of the operating system. This allows the virtual machine to optimize the scheduling of threads and reduce the overhead of context switching. Virtual threads are lightweight and can be created and destroyed quickly, making them ideal for tasks that require a large number of threads.
+The demo creates virtual threads that are scheduled by the virtual machine instead of the operating system. This allows the virtual machine to optimize the scheduling of threads and reduce the overhead of context switching. Virtual threads are lightweight and can be created and destroyed quickly, making them ideal for tasks that require a large number of threads.
 
-To compile and run the `TravelingSalesman` class with the `--enable-preview` flag to enable virtual threads, follow these steps:
+## Running the Example with the JDK 19+
 
 1. Install jdk 19+
 2. Open a terminal or command prompt and navigate to the directory containing the `TravelingSalesman.java` file.
@@ -13,7 +13,7 @@ To compile and run the `TravelingSalesman` class with the `--enable-preview` fla
    javac --enable-preview TravelingSalesman.java
    ```
 
-   The `--enable-preview` flag enables preview features, including virtual threads.
+   The `--enable-preview` flag is needed for Virtual Threads in Java 19 or 20.
    
 4. Run the program by running the following command:
 
@@ -21,10 +21,30 @@ To compile and run the `TravelingSalesman` class with the `--enable-preview` fla
    java --enable-preview TravelingSalesman
    ```
 
-   The `--enable-preview` flag is also required when running the program to enable virtual threads.
-
-
 The program will calculate the shortest route for each starting city and print the total distance to the console.
+
+## Running the Example in Visual Studio Code
+
+To run the `TravelingSalesman` class in Visual Studio Code, follow these steps:
+
+1. Install JDK 19+
+2. Install the Java Extension Pack for Visual Studio Code.
+3. Open the `TravelingSalesman.java` file in Visual Studio Code.
+4. Press `F5` to open the Run panel.
+5. Select `Java` as the environment and `TravelingSalesman` as the configuration.
+6. Press `Enter` to run the configuration.
+
+   This will run the `TravelingSalesman` class and output the total distance for each starting city in the Debug Console.
+
+Note: If you are using virtual threads in Java 19 or 20, Make sure to enable virtual threads by adding the `--enable-preview` flag to the `java.compilerArgs` setting in the `.vscode/settings.json` file:
+
+```json
+{
+    "java.compilerArgs": ["--enable-preview"]
+}
+```
+
+Note: Make sure to restart Visual Studio Code after making this change for it to take effect.
 
 ## Details of the Traveling Salesman problem
 
