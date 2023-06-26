@@ -1,4 +1,4 @@
-![Traveling Salesmzn]( https://github.com/roryp/virtualthreads/blob/main/salesman.jpeg?raw=true)
+![Traveling Salesmzn](https://github.com/roryp/virtualthreads/blob/main/salesman.jpg?raw=true)
 
 # Traveling Salesman problem with Java Virtual Threads
 
