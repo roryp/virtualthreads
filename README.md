@@ -19,6 +19,8 @@ The [BasicVirtualThread](https://github.com/roryp/virtualthreads/blob/main/src/B
 
 ## Traveling Salesman problem
 
-In the [TravelingSalesman](https://github.com/roryp/virtualthreads/blob/main/src/TravelingSalesman.java), we use a brute force solution to this problem involves calculating the distance of every possible route and selecting the shortest one. However, this approach quickly becomes infeasible as the number of cities increases, since the number of possible routes grows exponentially.
+In the [TravelingSalesman](https://github.com/roryp/virtualthreads/blob/main/src/TravelingSalesman.java), the program solves the Traveling Salesman Problem (TSP) using a brute-force approach. The TSP is a problem in which a salesman must visit a set of cities exactly once and return to the starting city, with the goal of minimizing the total distance traveled.
+
+The program defines a map of distances between cities, creates a list of all cities, and then calculates the total distance and route for each starting city in parallel using an executor. The program then prints the total distance and route for each starting city, and finds the best city to start based on the shortest total distance. Finally, the program prints the best city to start.
 
 There are many other algorithms for solving the Traveling Salesman Problem, each with its own strengths and weaknesses. The choice of algorithm depends on the specific problem instance and the desired trade-off between solution quality and computational efficiency.
