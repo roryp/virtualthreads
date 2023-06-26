@@ -35,10 +35,12 @@ public class TravelingSalesman {
                 .min(Map.Entry.comparingByValue())
                 .orElseThrow();
 
-        System.out.printf("Best city to start is %s with a total distance of %d miles\n", bestCity.getKey(), bestCity.getValue());
+        System.out.printf("Best city to start is %s with a total distance of %d miles\n", bestCity.getKey(),
+                bestCity.getValue());
     }
 
-    private static int calculateDistance(String startCity, List<String> otherCities, Map<String, Map<String, Integer>> cities, Random random) {
+    private static int calculateDistance(String startCity, List<String> otherCities,
+            Map<String, Map<String, Integer>> cities, Random random) {
         int totalDistance = 0;
         String currentCity = startCity;
 
