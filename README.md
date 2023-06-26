@@ -1,21 +1,13 @@
-The TravelingSalesman class uses virtual threads to calculate the shortest route for each starting city in parallel. The for loop on line 14 iterates over each starting city and creates a virtual thread to calculate the shortest route. The Thread.startVirtualThread() method is used to create a virtual thread for each starting city.
+# Virtual threads and the Traveling Salesman problem
 
-The startVirtualThread() method creates a virtual thread that is scheduled by the virtual machine instead of the operating system. This allows the virtual machine to optimize the scheduling of threads and reduce the overhead of context switching. Virtual threads are lightweight and can be created and destroyed quickly, making them ideal for tasks that require a large number of threads.
-
-To compile and run the TravelingSalesman class with the --enable-preview flag to enable virtual threads, follow these steps:
-
-Open a terminal or command prompt and navigate to the directory containing the TravelingSalesman.java file.
-
-GitHub Copilot: Sure, here's an explanation of the virtual thread logic in the `TravelingSalesman` class and how to compile and run the class with the `--enable-preview` flag to enable virtual threads:
-
-The `TravelingSalesman` class uses virtual threads to calculate the shortest route for each starting city in parallel. The `for` loop on line 14 iterates over each starting city and creates a virtual thread to calculate the shortest route. The `Thread.startVirtualThread()` method is used to create a virtual thread for each starting city. 
-
+The TravelingSalesman class uses virtual threads to calculate the shortest route for each starting city in parallel. The for loop on line 14 iterates over each starting city and creates a virtual thread to calculate the shortest route.
 The `startVirtualThread()` method creates a virtual thread that is scheduled by the virtual machine instead of the operating system. This allows the virtual machine to optimize the scheduling of threads and reduce the overhead of context switching. Virtual threads are lightweight and can be created and destroyed quickly, making them ideal for tasks that require a large number of threads.
 
 To compile and run the `TravelingSalesman` class with the `--enable-preview` flag to enable virtual threads, follow these steps:
 
-1. Open a terminal or command prompt and navigate to the directory containing the `TravelingSalesman.java` file.
-2. Compile the source code by running the following command:
+1. Install jdk 19+
+2. Open a terminal or command prompt and navigate to the directory containing the `TravelingSalesman.java` file.
+3. Compile the source code by running the following command:
 
    ```java
    javac --enable-preview TravelingSalesman.java
@@ -23,7 +15,7 @@ To compile and run the `TravelingSalesman` class with the `--enable-preview` fla
 
    The `--enable-preview` flag enables preview features, including virtual threads.
    
-3. Run the program by running the following command:
+4. Run the program by running the following command:
 
    ```java
    java --enable-preview TravelingSalesman
