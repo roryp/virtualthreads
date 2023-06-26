@@ -9,7 +9,6 @@ public class VirtualThreadEntry {
             IntStream.range(0, 10_000) // create a stream of integers from 0 to 9999
                     .forEach(i -> executor.submit(() -> { // submit a virtual thread for each integer
                         System.out.println("Hello from virtual thread " + i);
-                        Thread.sleep(Duration.ofSeconds(1)); // sleep for 1 second
                         return i;
                     }));
         }
