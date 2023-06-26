@@ -1,3 +1,5 @@
+![Traveling Salesmzn]( https://github.com/roryp/virtualthreads/blob/main/salesman.jpeg?raw=true)
+
 # Traveling Salesman problem with Java Virtual Threads
 
 The Traveling Salesman Problem is a classic optimization problem in computer science. The problem is defined as follows: given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the starting city?
