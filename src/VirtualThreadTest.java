@@ -13,9 +13,11 @@ public class VirtualThreadTest {
                 threadCount.incrementAndGet();
             });
         }
-        Instant end = Instant.now();
 
-        System.out.println("Number of threads: " + threadCount.get());
-        System.out.println("Time taken: " + Duration.between(start, end).toMillis() + " ms");
-    }
+        System.out.println("Number of threads: " +
+            threadCount.get());        
+        System.out.println("Time taken: " +
+            Duration.between(start, Instant.now()).toMillis() +
+            " ms");    
+        }
 }
