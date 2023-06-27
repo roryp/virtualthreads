@@ -2,7 +2,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class VirtualThreadTest {
+public class VirtualThreadSpeedTest {
 
     public static void main(String[] args) {
         AtomicInteger threadCount = new AtomicInteger(0);
