@@ -8,12 +8,14 @@ public class VirtualThreadTest {
         AtomicInteger threadCount = new AtomicInteger(0);
 
         Instant start = Instant.now();
-        while (Duration.between(start, Instant.now()).getSeconds() < 1) {
+        while (threadCount.get() <= 1_000_000) {
             Thread.startVirtualThread(() -> {
                 threadCount.incrementAndGet();
             });
         }
+        Instant end = Instant.now();
 
-        System.out.println("Number of threads created in 1 second: " + threadCount.get());
+        System.out.println("Number of threads: " + threadCount.get());
+        System.out.println("Time taken: " + Duration.between(start, end).toMillis() + " ms");
     }
 }
