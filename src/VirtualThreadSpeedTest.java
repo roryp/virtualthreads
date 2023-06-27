@@ -1,6 +1,5 @@
-import java.time.Duration;
-import java.time.Instant;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.time.*;
+import java.util.concurrent.atomic.*;
 
 public class VirtualThreadSpeedTest {
 
