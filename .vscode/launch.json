@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BasicVirtualThread",
+            "request": "launch",
+            "mainClass": "BasicVirtualThread",
+            "projectName": "virtualthreads_d73f6cb5"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

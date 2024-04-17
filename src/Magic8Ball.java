@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Magic8Ball {
-    void main() throws InterruptedException {
+    void main(String[] args) throws InterruptedException {
         var answers = new String[] {
                 "It is certain.",
                 "It is decidedly so.",
